@@ -1,6 +1,11 @@
 import React from "react";
 import "./App.css";
 
+import Input from "./components/formulario/Input";
+import IndiretaPai from "./components/comunicacao/IndiretaPai";
+import DiretaPai from "./components/comunicacao/DiretaPai";
+import UsuarioInfo from "./components/condicional/UsuarioInfo";
+import ParOuImpar from "./components/condicional/ParOuImpar";
 import TabelaProdutos from "./components/repeticao/TabelaProdutos";
 import ListaAlunos from "./components/repeticao/ListaAlunos";
 import FamiliaMembro from "./components/basicos/FamiliaMembro";
@@ -16,6 +21,20 @@ export default () => (
     <h1>Fundamentos React</h1>
 
     <div className="Cards">
+      <Card titulo="#11 - Componente Controlado" color="#e45F56">
+        <Input />
+      </Card>
+      <Card titulo="#10 - Comunicação Indireta" color="#8BAD39">
+        <IndiretaPai />
+      </Card>
+      <Card titulo="#09 - Comunicação Direta" color="#59323C">
+        <DiretaPai />
+      </Card>
+      <Card titulo="#08 - Renderização Condicional" color="#982395">
+        <ParOuImpar numero={21} />
+        <UsuarioInfo usuario={{ nome: "Fernando" }} />
+        {/* <UsuarioInfo usuario={{ email: "fer@nando.com" }} /> */}
+      </Card>
       <Card titulo="#07 - Desafio Produto" color="#3A9AD9">
         <TabelaProdutos />
       </Card>
